@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    /* Base colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -13,45 +14,52 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Educational Dashboard Theme - Light Mode */
+    --primary: 214.3 94.6% 60.2%; /* Blue */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 226.2 70.7% 58.6%; /* Indigo */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 262.1 83.3% 63.5%; /* Purple */
+    --accent-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 214.3 94.6% 60.2%;
 
-    --radius: 0.5rem;
-
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-primary: 214.3 94.6% 60.2%;
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Difficulty Levels */
+    --difficulty-level-1: 213.8 93.9% 87.8%; /* Light Blue */
+    --difficulty-level-2: 217.2 91.2% 59.8%; /* Medium Blue */
+    --difficulty-level-3: 223.5 70.7% 40.4%; /* Dark Blue */
+
+    /* Progress States */
+    --progress-not-started: 220 13% 91%;
+    --progress-in-progress: 213.8 93.9% 67.8%;
+    --progress-completed: 151.8 58.6% 52.7%;
+
+    /* Radius */
+    --radius: 0.5rem;
   }
 
   .dark {
+    /* Base colors - Dark Mode */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -61,32 +69,96 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Educational Dashboard Theme - Dark Mode */
+    --primary: 214.3 94.6% 60.2%; /* Blue */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 226.2 70.7% 58.6%; /* Indigo */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 262.1 83.3% 63.5%; /* Purple */
+    --accent-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 214.3 94.6% 60.2%;
+
+    /* Sidebar */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 214.3 94.6% 60.2%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Difficulty Levels */
+    --difficulty-level-1: 213.8 70% 50%; /* Dark Mode Light Blue */
+    --difficulty-level-2: 217.2 70% 45%; /* Dark Mode Medium Blue */
+    --difficulty-level-3: 223.5 70% 35%; /* Dark Mode Dark Blue */
+
+    /* Progress States */
+    --progress-not-started: 220 13% 25%;
+    --progress-in-progress: 213.8 70% 50%;
+    --progress-completed: 151.8 50% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Educational Dashboard Custom Classes */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .progress-ring {
+    @apply transition-all duration-500;
+  }
+
+  .topic-navigator-item {
+    @apply border-l-2 pl-3 py-2 transition-all duration-200;
+  }
+
+  .topic-navigator-item.active {
+    @apply border-l-4 border-primary;
+  }
+
+  .topic-navigator-item.completed {
+    @apply border-l-2 border-progress-completed;
+  }
+
+  .topic-navigator-item.in-progress {
+    @apply border-l-2 border-progress-in-progress;
+  }
+
+  .difficulty-badge-1 {
+    @apply bg-difficulty-1 text-black text-xs px-2 py-0.5 rounded-full;
+  }
+
+  .difficulty-badge-2 {
+    @apply bg-difficulty-2 text-white text-xs px-2 py-0.5 rounded-full;
+  }
+
+  .difficulty-badge-3 {
+    @apply bg-difficulty-3 text-white text-xs px-2 py-0.5 rounded-full;
+  }
+
+  .achievement-badge {
+    @apply rounded-full p-2 bg-gradient-to-br shadow-md;
   }
 }
 
