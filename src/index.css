@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -169,5 +170,37 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  .carousel-container {
+    animation: carousel 30s linear infinite;
+  }
+  
+  .how-it-works-card.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  
+  .feature-card.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

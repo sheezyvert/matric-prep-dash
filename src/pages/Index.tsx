@@ -5,18 +5,26 @@ import { FeaturesSection } from "@/components/landing/FeaturesSection";
 import { CurriculumSection } from "@/components/landing/CurriculumSection";
 import { TeacherBenefitsSection } from "@/components/landing/TeacherBenefitsSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
+import { TeacherDashboardPreview } from "@/components/landing/TeacherDashboardPreview";
+import { FinalCTA } from "@/components/landing/FinalCTA";
+import { Footer } from "@/components/landing/Footer";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <Navigation />
       <main>
         <HeroSection />
         <FeaturesSection />
+        <HowItWorksSection />
         <CurriculumSection />
+        <TeacherDashboardPreview />
         <TeacherBenefitsSection />
         <TestimonialsSection />
+        <FinalCTA />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -25,13 +25,13 @@ const languages = [
 export function LanguageSelector() {
   return (
     <Select defaultValue="en">
-      <SelectTrigger className="w-[140px] bg-white/50 backdrop-blur-sm">
-        <Globe className="mr-2 h-4 w-4" />
+      <SelectTrigger className="w-[140px] bg-white/80 backdrop-blur-sm hover:bg-white transition-colors border-sa-sky/20">
+        <Globe className="mr-2 h-4 w-4 text-sa-sky" />
         <SelectValue placeholder="Select language" />
       </SelectTrigger>
       <SelectContent>
         {languages.map((lang) => (
-          <SelectItem key={lang.code} value={lang.code}>
+          <SelectItem key={lang.code} value={lang.code} className="cursor-pointer">
             {lang.name}
           </SelectItem>
         ))}
