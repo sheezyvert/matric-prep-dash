@@ -7,11 +7,12 @@ const subjects = [
   { name: "Mathematics", icon: "📐", color: "bg-blue-100" },
   { name: "Physical Sciences", icon: "🧪", color: "bg-purple-100" },
   { name: "Life Sciences", icon: "🧬", color: "bg-green-100" },
-  { name: "Accounting", icon: "📊", color: "bg-yellow-100" },
+  { name: "Information Technology", icon: "💻", color: "bg-indigo-100" },
+  { name: "CAT", icon: "🖥️", color: "bg-cyan-100" },
   { name: "Economics", icon: "📈", color: "bg-red-100" },
-  { name: "Business Studies", icon: "💼", color: "bg-orange-100" },
   { name: "Geography", icon: "🌍", color: "bg-emerald-100" },
   { name: "History", icon: "📚", color: "bg-amber-100" },
+  { name: "Life Orientation", icon: "🎯", color: "bg-rose-100" },
 ];
 
 export function CurriculumSection() {
@@ -44,7 +45,7 @@ export function CurriculumSection() {
   }, []);
 
   return (
-    <section id="curriculum" className="py-16 px-4 bg-gradient-to-br from-white to-sa-gold/10">
+    <section id="curriculum" className="py-24 px-4 bg-gradient-to-br from-white via-sa-gold/5 to-sa-emerald/10">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4 text-sa-charcoal">
           Comprehensive Coverage of High School Subjects

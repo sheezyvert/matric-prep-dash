@@ -12,7 +12,7 @@ import { Footer } from "@/components/landing/Footer";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-sa-gold/5 to-sa-emerald/10">
       <Navigation />
       <main>
         <HeroSection />

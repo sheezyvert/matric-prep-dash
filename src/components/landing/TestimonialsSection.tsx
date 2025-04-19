@@ -8,25 +8,25 @@ const testimonials = [
     name: "Thabo M.",
     role: "Grade 12 Student",
     content: "The AI explanations in my language helped me understand calculus like never before. My marks improved significantly!",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    image: "https://randomuser.me/api/portraits/men/62.jpg"
   },
   {
     name: "Mrs. Patel",
     role: "Mathematics Teacher",
     content: "This platform has transformed how I support my students. The multilingual feature ensures no student is left behind.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    image: "https://randomuser.me/api/portraits/women/63.jpg"
   },
   {
     name: "Amahle N.",
     role: "Grade 12 Student",
     content: "Being able to practice with past papers and get instant AI help made me feel confident for my matric exams.",
-    image: "https://randomuser.me/api/portraits/women/26.jpg"
+    image: "https://randomuser.me/api/portraits/women/40.jpg"
   },
   {
     name: "Mr. Khumalo",
     role: "School Principal",
     content: "UpGrade has improved our school's overall performance. The data insights help us identify areas where students need extra support.",
-    image: "https://randomuser.me/api/portraits/men/52.jpg"
+    image: "https://randomuser.me/api/portraits/men/66.jpg"
   },
   {
     name: "Lesedi T.",

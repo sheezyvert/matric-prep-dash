@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Brain, Flag, Languages, BarChart } from "lucide-react";
 import { useSubjectsCount } from "@/hooks/useSubjectsCount";
@@ -16,7 +15,6 @@ export function HeroSection() {
   const { data: subjectsCount, isLoading } = useSubjectsCount();
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   
-  // Track cursor position for gradient effect
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setCursorPosition({
@@ -34,21 +32,19 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative pt-28 pb-20 px-4 overflow-hidden">
-      {/* Morphing background */}
+    <section className="relative pt-36 pb-24 px-4 overflow-hidden">
       <div 
         className="absolute inset-0 bg-gradient-to-br from-sa-sky/10 via-sa-gold/10 to-sa-sunset/10 
         bg-[length:200%_200%] animate-morph-gradient -z-10" 
         style={gradientStyle}
       />
       
-      {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-sa-emerald/10 blur-3xl animate-pulse-gentle -z-10" />
       <div className="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-sa-sunset/10 blur-3xl animate-pulse-gentle -z-10" />
       
       <div className="container mx-auto text-center max-w-5xl">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sa-charcoal mb-6 animate-fade-in [text-wrap:balance]">
-          AI‑Powered Tutoring in Any Language. At Your Pace.
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sa-charcoal mb-8 animate-fade-in [text-wrap:balance]">
+          AI‑Powered Tutoring in Any South African Language. At Your Pace.
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto animate-fade-in delay-75 [text-wrap:balance]">
