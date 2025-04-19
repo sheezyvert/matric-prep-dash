@@ -18,11 +18,11 @@ export function HeroSection() {
     <section className="relative pt-24 pb-12 px-4 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
-          Master Mathematics with AI
+          Master Your High School Journey with AI
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
-          Grade 12 Maths, explained step-by-step in your language
+          Step-by-step learning in your language, personalized to your pace
         </p>
 
         {isLoading ? (
@@ -39,7 +39,7 @@ export function HeroSection() {
             className="text-lg"
             asChild
           >
-            <a href="/signup">Start Learning</a>
+            <a href="/auth?mode=signup">Start Learning</a>
           </Button>
           <Button 
             size="lg" 
@@ -47,7 +47,7 @@ export function HeroSection() {
             className="text-lg"
             asChild
           >
-            <a href="/teacher-signup">I&apos;m a Teacher</a>
+            <a href="/auth?mode=signup&type=teacher">I&apos;m a Teacher</a>
           </Button>
         </div>
 
